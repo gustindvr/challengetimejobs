@@ -1,0 +1,1 @@
+Plantilla generica para footer, que reciba title and links por props

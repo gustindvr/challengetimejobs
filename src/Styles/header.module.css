@@ -1,0 +1,11 @@
+.backgroundImgHeader{
+	background-image: url(../Img/xv.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.backgroundImgFooter{
+	background-image: url(../Img/round.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
