@@ -1,0 +1,20 @@
+.card{
+	transition: transform 500ms ease;
+}
+
+.card:hover{
+	transform: scale(1.05);
+}
+
+.buttonCard{
+	visibility: hidden;
+	transition: all 500ms ease-in;
+}
+
+.buttonCard:hover{
+	background-color: white;
+}
+
+.card:hover .buttonCard{
+	visibility: visible;
+}
