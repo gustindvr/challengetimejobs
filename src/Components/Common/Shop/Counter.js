@@ -3,7 +3,15 @@ import{Box, Button, Text, Icon} from '@chakra-ui/react';
 import {BsPlusCircle} from 'react-icons/bs';
 import {BiMinusCircle} from 'react-icons/bi';
 
-const Counter = ({counter, addProduct, sustractProduct}) => {
+const Counter = ({counter, setCounter}) => {
+
+	const addProduct = async () => {
+		setCounter(counter + 1);
+	}
+
+	const sustractProduct = () => {
+		counter <= 0 ? setCounter(0) : setCounter(counter - 1)
+	}
 
 	return (  
 		<Box 
@@ -11,7 +19,6 @@ const Counter = ({counter, addProduct, sustractProduct}) => {
 			boxShadow="2xl" 
 			px="6"
 			py='1' 
-			border='0.5px solid #ccc'
 			rounded="2xl" 
 			bg="white"
 			alignItems='center'

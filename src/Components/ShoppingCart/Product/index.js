@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import DescriptionProduct from './DescriptionProduct';
-import Counter from './Counter';
+import Counter from '../../Common/Shop/Counter';
 
 import {
 	Flex,
@@ -13,14 +13,6 @@ const Product = ({price = 2000}) => {
 	const [totalPrice, setTotalPrice] = useState(price)
 	const [counter, setCounter] = useState(1);
 
-	const addProduct = async () => {
-		setCounter(counter + 1);
-		
-	}
-
-	const sustractProduct = () => {
-		counter <= 0 ? setCounter(0) : setCounter(counter - 1)
-	}
 
 	useEffect(() => {
 		setTotalPrice(price * counter);
@@ -42,7 +34,7 @@ const Product = ({price = 2000}) => {
 				<DescriptionProduct category='categoria y marca' name='nombre' price='$2000' measure='0.7' />
 			</Box>
 			<Box >
-				<Counter counter={counter}  addProduct={addProduct} sustractProduct={sustractProduct}/>
+				<Counter counter={counter}  setCounter={setCounter}/>
 			</Box>
 			<Box >
 				$ {totalPrice}

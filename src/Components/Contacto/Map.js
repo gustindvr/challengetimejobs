@@ -1,5 +1,7 @@
 import GoogleMapReact from 'google-map-react';
 
+
+
 const Map = () => {
 	const dataMap = {
 		center: {
@@ -12,7 +14,7 @@ const Map = () => {
 	return (  
 		<>
 				<GoogleMapReact
-          bootstrapURLKeys={{ key: 'AIzaSyCbuvFUg8v-2R8TsCTdAhLy4kZL-ptYZ60'}}
+          bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_API_KEY}}
           defaultCenter= {dataMap.center}
           defaultZoom={dataMap.zoom}
         >
