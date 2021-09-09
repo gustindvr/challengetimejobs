@@ -13,7 +13,6 @@ const Product = ({price = 2000}) => {
 	const [totalPrice, setTotalPrice] = useState(price)
 	const [counter, setCounter] = useState(1);
 
-
 	useEffect(() => {
 		setTotalPrice(price * counter);
 	}, [counter, price])

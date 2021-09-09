@@ -27,16 +27,16 @@ const Home = () => {
 	return (  
 		<>
 			<Title first='primer' second='palabra' title='Acá va el titulo'  />
-			<Flex flexFlow='row wrap' justifyContent='center' my='50px'>
+			<Flex flexFlow='row wrap' justifyContent='space-around' my='50px'>
 					{isMobile ? 
-						<Box flexBasis='50%'>
+						<Box w='100%'>
 							<TopBarMobile />  
 						</Box> :
-						<Box flexBasis='20%' ml='50px'>
+						<Box w='20%' ml='30px'>
 							<LeftBar />
 						</Box>
 					}
-				<Box mx='auto'>
+				<Box w='70%'>
 					<ContentCards />
 				</Box>
 			</Flex>
