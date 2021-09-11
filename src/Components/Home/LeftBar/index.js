@@ -5,15 +5,32 @@ import {
 	AccordionItem, 
 	AccordionPanel,
 	Stack,
-	Checkbox
+	Checkbox,
+	Slider,
+	SliderFilledTrack,
+	SliderTrack,
+	SliderThumb,
+	Text
 } from '@chakra-ui/react';
 import {AddIcon, MinusIcon} from '@chakra-ui/icons';
+import {GiBeerBottle} from 'react-icons/gi';
 
 import './LeftBar.css';
 
 const LeftBar = () => {
 	return (  
 		<Box className='shadowBox'>
+			<Box  textAlign='center'py='20px'>
+				<Text fontSize='14px' fontWeight='bold' textAlign='left' ml={{base:'0', md:'20px'}} my='5px'>Price Range</Text>
+				<Slider aria-label="slider-ex-4" w='80%' min={100} max={2000} defaultValue={30}>
+					<SliderTrack bg="red.100">
+						<SliderFilledTrack bg="#95072e" />
+					</SliderTrack>
+					<SliderThumb boxSize={6}>
+						<Box color="#95072e" as={GiBeerBottle} />
+					</SliderThumb>
+				</Slider>
+			</Box>
 			<Accordion defaultIndex={[0]} allowMultiple>
 			<AccordionItem>
 				{({ isExpanded }) => (
@@ -21,7 +38,7 @@ const LeftBar = () => {
 						<h2>
 							<AccordionButton>
 								<Box flex="1" textAlign="left">
-									title
+									Filter
 								</Box>
 								{isExpanded ? (
 									<MinusIcon fontSize="12px" />
@@ -33,10 +50,16 @@ const LeftBar = () => {
 						<AccordionPanel pb={4}>
 							<Stack spacing={5} direction="column">
 								<Checkbox colorScheme="red" defaultIsChecked>
-									Item 1
+									Filter 1
 								</Checkbox>
 								<Checkbox colorScheme="green" >
-									Item 2
+									Filter 2
+								</Checkbox>
+								<Checkbox colorScheme="red" defaultIsChecked>
+									Filter 3
+								</Checkbox>
+								<Checkbox colorScheme="green" >
+									Filter 4
 								</Checkbox>
 							</Stack>
 						</AccordionPanel>
@@ -49,7 +72,7 @@ const LeftBar = () => {
 						<h2>
 							<AccordionButton>
 								<Box flex="1" textAlign="left">
-									title 2
+									Filter 2
 								</Box>
 								{isExpanded ? (
 									<MinusIcon fontSize="12px" />
@@ -61,10 +84,10 @@ const LeftBar = () => {
 						<AccordionPanel pb={4}>
 							<Stack spacing={5} direction="column">
 								<Checkbox colorScheme="red" defaultIsChecked>
-									Item 1
+									Filter 1
 								</Checkbox>
 								<Checkbox colorScheme="green" >
-									Item 2
+									Filter 2
 								</Checkbox>
 							</Stack>
 						</AccordionPanel>
@@ -77,7 +100,7 @@ const LeftBar = () => {
 						<h2>
 							<AccordionButton>
 								<Box flex="1" textAlign="left">
-									title 3
+									Filter 3
 								</Box>
 								{isExpanded ? (
 									<MinusIcon fontSize="12px" />
@@ -89,10 +112,7 @@ const LeftBar = () => {
 						<AccordionPanel pb={4}>
 							<Stack spacing={5} direction="column">
 								<Checkbox colorScheme="red" defaultIsChecked>
-									Item 1
-								</Checkbox>
-								<Checkbox colorScheme="green" >
-									Item 2
+									Filter 1
 								</Checkbox>
 							</Stack>
 						</AccordionPanel>
@@ -105,7 +125,7 @@ const LeftBar = () => {
 						<h2>
 							<AccordionButton>
 								<Box flex="1" textAlign="left">
-									title 4
+									Filter 4
 								</Box>
 								{isExpanded ? (
 									<MinusIcon fontSize="12px" />
@@ -117,10 +137,10 @@ const LeftBar = () => {
 						<AccordionPanel pb={4}>
 							<Stack spacing={5} direction="column">
 								<Checkbox colorScheme="red" defaultIsChecked>
-									Item 1
+									Filter 1
 								</Checkbox>
 								<Checkbox colorScheme="green" >
-									Item 2
+									Filter 2
 								</Checkbox>
 							</Stack>
 						</AccordionPanel>

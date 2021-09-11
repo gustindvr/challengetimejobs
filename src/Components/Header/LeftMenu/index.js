@@ -20,7 +20,7 @@ const LeftMenu = ({isMobile}) => {
 			justifyContent='space-around'
 			mx={{base: 'auto', md: '0'}}
 			alignItems='center'
-			w='40%'
+			w='30%'
 		>
 			{
 				isMobile ? 

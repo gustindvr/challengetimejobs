@@ -1,14 +1,22 @@
+
+import {useSelector} from 'react-redux';
+
 import Product from "./Product";
 
+import {Text} from '@chakra-ui/react';
+
 const ProductList = () => {
+
+	const cart = useSelector(state => state.cart.list);
+
 	return (  
 		<>
-			<Product />
-			<Product />
-			<Product />
-			<Product />
-			<Product />
-			
+		{cart.map(productInCart => 
+			<Product 
+				productInCart={productInCart} 
+				key={productInCart.id} 
+			/>	
+		)}
 		</>
 	);
 }

@@ -8,11 +8,18 @@ import {
 	Image,
 } from '@chakra-ui/react';
 
-const Product = ({price = 2000}) => {
+const Product = ({productInCart}) => {
 
+	const {tagline, name, ebc, image_url} = productInCart;
+
+	/*API haven't this prop*/
+	const price = 2000;
+
+	/*States */
 	const [totalPrice, setTotalPrice] = useState(price)
 	const [counter, setCounter] = useState(1);
-
+	
+	/* Change price */
 	useEffect(() => {
 		setTotalPrice(price * counter);
 	}, [counter, price])
@@ -28,9 +35,9 @@ const Product = ({price = 2000}) => {
 			justifyContent={{base: 'center', md: 'space-around'}}
 			alignItems='center'
 		>
-			<Image src='' w='80px' h='120px' />
+			{<Image src={image_url} w='5%' h='120px' />}
 			<Box >
-				<DescriptionProduct category='categoria y marca' name='nombre' price='$2000' measure='0.7' />
+				{<DescriptionProduct category={tagline}name={name} price={price} ebc={ebc} />}
 			</Box>
 			<Box >
 				<Counter counter={counter}  setCounter={setCounter}/>
