@@ -10,7 +10,6 @@ import Map from '../Components/Contacto/Map';
 
 const Contacto = () => {
 
-	
 	return (  
 		<>
 		<Title first='trabhar' second='kohtakbl' title='kohtakbl'  />
@@ -23,7 +22,7 @@ const Contacto = () => {
 				<Info />
 			</Box>
 			<Box w={{base:'100%', md:'60%'}} h='350px'>
-				{/* <Map /> */}
+				<Map />
 			</Box>
 		</Flex>
 		</>
