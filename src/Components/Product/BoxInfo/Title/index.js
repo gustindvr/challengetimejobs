@@ -7,7 +7,7 @@ import {
 
 import {GiWineBottle, GiGrapes} from 'react-icons/gi';
 
-const Title = ({variant, category, title, variantGrape, measure}) => {
+const Title = ({variant, category, name, grape}) => {
 	return ( 
 		<>
 			<Flex 
@@ -42,7 +42,7 @@ const Title = ({variant, category, title, variantGrape, measure}) => {
 					w={{base:'100%'}}
 				>
 					<Text fontSize='30px'>
-						{title}
+						{name}
 					</Text>
 			</Flex>
 			<Flex 
@@ -64,11 +64,11 @@ const Title = ({variant, category, title, variantGrape, measure}) => {
 			>		
 				<Box w={{base:'100%'}}>
 					<Icon as={GiGrapes} w='20px' color='#9a193c ' />
-					<Text fontSize='12px' fontWeight='100' display='inline-block'>{variantGrape}</Text>
+					<Text fontSize='12px' fontWeight='100' display='inline-block'>{grape}</Text>
 				</Box>
 				<Box w={{base:'100%'}}>
 				<Icon as={GiWineBottle} w='20px' color='#9a193c '  />
-					<Text fontSize='12px' fontWeight='100'  display='inline-block'>{measure}</Text>
+					<Text fontSize='12px' fontWeight='100'  display='inline-block'>20 n</Text>
 				</Box>
 			</Flex>
 		</>

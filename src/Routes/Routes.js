@@ -6,7 +6,7 @@ import Footer from "../Components/Footer";
 import {
 	BrowserRouter as Router,
   Switch,
-  Route,
+  Route
 } from 'react-router-dom';
 
 import { Divider, Box } from "@chakra-ui/react";
@@ -14,6 +14,7 @@ import styles from '../Styles/header.module.css';
 import ShoppingCart from "../Pages/ShoppingCart";
 import Contacto from "../Pages/Contacto";
 import Product from "../Pages/Product";
+import Error404 from "../Components/Errors/404";
 
 const Routes = () => {
 	return ( 
@@ -34,9 +35,10 @@ const Routes = () => {
 					<Route exact path='/contacto' >
 						<Contacto/>
 					</Route>
-					<Route exact path='/product' >
+					<Route exact path='/product/:id' >
 						<Product />
 					</Route>
+					<Route component={Error404} />
 				</Switch>
 				<Box p='50px' className={styles.backgroundImgFooter}>
 					<Footer />

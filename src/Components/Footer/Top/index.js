@@ -7,6 +7,7 @@ import {
 	Box,
 } from '@chakra-ui/react';
 
+import logo from '../../../Img/lupulo.png';
 import {SiTelegram} from 'react-icons/si';
 import {FaPhoneAlt} from 'react-icons/fa';
 import {MdMail} from 'react-icons/md';
@@ -19,7 +20,7 @@ const TopFooter = () => {
 			w='100%' 
 			alignContent='center'
 		>
-				<Image src='' w='20%' h='50px' mb={{base: '20px', md: '0'}} />
+				<Image src={logo} w={{base: '100%', md: '20%'}} h='100%' mb={{base: '20px', md: '0'}} />
 				<Flex 
 					flexFlow='row wrap' 
 					w={{base:'100%' ,md:'40%'}} 
@@ -37,14 +38,14 @@ const TopFooter = () => {
 						</Box>
 						<Box w={{base:'100%', md: '35%'}}>
 							<Icon as={MdMail} color='#9a193c' w='20%' />
-							<Text fontSize={{base: '18px', md:'14px' }}>info@ventadistribution.ru</Text>
-							<Text fontSize={{base: '18px', md:'14px' }}>order@ventadistribution.ru</Text>
+							<Text fontSize='14px'>info@ventadistribution.ru</Text>
+							<Text fontSize='14px'>order@ventadistribution.ru</Text>
 						</Box>	
 				</Flex>
 				<Flex 
 					flexFlow='row wrap' 
 					justifyContent='center' 
-					w='20%' 
+					w={{base:'100%', md: '20%' }}
 					alignContent='center'
 					textAlign='center'
 					my={{base: '40px', md: '0'}}

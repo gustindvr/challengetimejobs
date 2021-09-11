@@ -7,7 +7,7 @@ import BoxAddCart from './BoxAddCart';
 import Description from './Description';
 import Title from './Title';
 
-const BoxInfo = () => {
+const BoxInfo = ({id, name, tagline, description, attenuation_level}) => {
 	return (  
 		<Container maxW='container.sm'>
 			<Flex
@@ -20,12 +20,11 @@ const BoxInfo = () => {
 				<Title 
 					variant='rnabhar' 
 					category='katanor tobapob' 
-					title='camepabn' 
-					variantGrape='kpachoe monycrañkoe'
-					measure='0.75 n.'
+					name={name} 
+					grape='kpachoe monycrañkoe'
 				/>
-				<Description />
-				<BoxAddCart />
+				<Description tagline={tagline} description={description} attenuation_level={attenuation_level} />
+				<BoxAddCart id={id}/>
 			</Flex>
 			<Box></Box>
 		</Container>

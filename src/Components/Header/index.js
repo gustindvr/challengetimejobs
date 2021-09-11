@@ -3,8 +3,11 @@ import LeftMenu from './LeftMenu';
 import {
 	Flex,
 	Box,
+	Image
 } from '@chakra-ui/react';
+
 import RightMenu from './RightMenu';
+import logo from '../../Img/lupulo.png';
 
 
 const Header = () => {
@@ -27,7 +30,7 @@ const Header = () => {
 	return (  
 		<Flex 
 			flexFlow='row wrap' 
-			justifyContent='space-between' 
+			justifyContent={{base:'space-around', md: 'space-between'}} 
 			textAlign='center' 
 			alignSelf='center' 
 			pt='30px'>
@@ -35,9 +38,7 @@ const Header = () => {
 			{isMobile ? 
 				<RightMenu /> : 
 				<>
-					<Box>
-						Logo
-					</Box>
+					<Image src={logo} w='20%' h='100%' />
 					<RightMenu />
 				</>
 			}

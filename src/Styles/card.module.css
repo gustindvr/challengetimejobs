@@ -17,4 +17,5 @@
 
 .card:hover .buttonCard{
 	visibility: visible;
+	background-color: white;
 }

@@ -17,14 +17,14 @@ export const {setProductsList} = productsSlices.actions;
 
 export default productsSlices.reducer;
 
-export const fetchAllProducts = () => {
+export const fetchAllProducts = (page) => {
 	
 	return async (dispatch) => {
 		try {
-			const resp = await axios.get(process.env.REACT_APP_API);
+			const resp = await axios.get(`${process.env.REACT_APP_API}?page=${page}`);
 			dispatch(setProductsList(resp.data));
 		} catch (error) {
-			console.log.log(error);
+			console.log(error);
 		}
 	}
 

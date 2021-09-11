@@ -18,8 +18,8 @@ const RightMenu = () => {
 
 
 	return (  
-		<Flex flexFlow='row wrap' justifyContent={{base:'center', md:'space-between'}} >
-			<Box 
+		<Flex flexFlow='row wrap' alignContent='center' justifyContent={{base:'center', md:'space-between'}} >
+			<Button 
 				as='button' 
 				bg='#9a193c ' 
 				_hover={{bg: ' #95072e'}}
@@ -30,7 +30,7 @@ const RightMenu = () => {
 				my={{base:'10px', md: '0'}}
 			>
 				Registrarse o Iniciar Sesión
-			</Box>
+			</Button>
 			<Button 
 				border='1px solid #9a193c' 
 				borderRadius='none' 

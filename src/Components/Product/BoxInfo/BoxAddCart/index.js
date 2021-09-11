@@ -1,4 +1,10 @@
 import {useState} from 'react';
+import {fetchOneProduct} from '../../../../store/slices/cart';
+import Counter from '../../../Common/Shop/Counter';
+import {FiShoppingBag, FiShare2} from 'react-icons/fi';
+
+import { useDispatch } from 'react-redux';
+
 import {
 	Flex,
 	Text,
@@ -6,11 +12,17 @@ import {
 	Icon,
 	Box
 } from '@chakra-ui/react';
-import Counter from '../../../Common/Shop/Counter';
-import {FiShoppingBag, FiShare2} from 'react-icons/fi';
 
-const BoxAddCart = ({price = 2000}) => {
+const BoxAddCart = ({id, price = 2000}) => {
+
 	const [counter, setCounter] = useState(1);
+
+	const dispatch = useDispatch();
+
+	const clickHandler = (id) => {
+		const idToString = String(id);
+		dispatch(fetchOneProduct(idToString));
+	}
 
 	return (  
 		<Flex
@@ -26,7 +38,7 @@ const BoxAddCart = ({price = 2000}) => {
 		<Box mx='10px' my={{base: '20px', md: '0'}}>
 			<Counter counter={counter} setCounter={setCounter} />
 		</Box>
-		<Button bg='white' borderRadius='full' w={0} mx='10px'>
+		<Button bg='white' borderRadius='full' w={0} mx='10px' onClick={() => clickHandler(id)}>
 			<Icon 
 				as={FiShoppingBag} 
 				w='50px' 
