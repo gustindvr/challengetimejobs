@@ -18,9 +18,12 @@ export const {setCartList} = cartSlices.actions;
 export default cartSlices.reducer;
 
 export const fetchOneProduct = (productId) => {
+
+	const baseUrl = 'https://api.punkapi.com/v2/beers';
+
 	return async (dispatch, id) => {
 		try {
-			const resp = await axios.get(`${process.env.REACT_APP_API}/${productId}`);
+			const resp = await axios.get(`${baseUrl}/${productId}`);
 			dispatch(setCartList(resp.data[0]));
 		} catch (error) {
 			console.log(error);
