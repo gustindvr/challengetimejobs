@@ -25,12 +25,12 @@ const NavBar = () => {
 					<Link to='!#'>Link4</Link>
 				</LinkChakra>
 				<Text>♦</Text>
-				<LinkChakra mx='5px'>
+				<LinkChakra mx='5px' _disabled>
 					<Link to='!#'>Link5</Link>
 				</LinkChakra>
 				<Text>♦</Text>
 				<LinkChakra mx='5px'>
-					<Link to='/contacto'>Contacto</Link>
+					<Link to='/contacto'>Find Us</Link>
 				</LinkChakra>
 		</Flex>
 	);

@@ -8,7 +8,7 @@ const Home = () => {
 
 	return (  
 		<>
-			<Title first='primer' second='palabra' title='Acá va el titulo'  />
+			<Title first='Todos' second='Nuestros' title='Productos'  />
 			<Flex flexFlow='row wrap' justifyContent='space-around' my='50px'>
 				<Box w={{base:'80%', md: '20%'}} ml='30px'>
 					<LeftBar /> 

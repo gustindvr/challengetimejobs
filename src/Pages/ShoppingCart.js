@@ -11,7 +11,7 @@ const ShoppingCart = () => {
 			flexFlow='row wrap'
 			mb={{base:'100px', md:'50px'}}
 		>
-			<Title first='trabhar' second='kopenha' title='kop3nha' />
+			<Title first='Your' second='Shop' title='Cart' />
 			<ProductList />
 		</Flex>
 	);
