@@ -18,9 +18,12 @@ export const {setProduct} = productSlice.actions;
 export default productSlice.reducer;
 
 export const getProduct = (id) => {
+
+	const baseUrl = 'https://api.punkapi.com/v2/beers';
+
 	return async (dispatch) => {
 		try {
-			const resp = await axios.get(`${process.env.REACT_APP_API}/${id}`)
+			const resp = await axios.get(`${baseUrl}/${id}`)
 			dispatch(setProduct(resp.data[0]))
 		} catch (error) {
 			console.log(error);
