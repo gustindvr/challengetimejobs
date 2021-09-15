@@ -42,6 +42,7 @@ const Card = ({id, tagline, image, title, price, boilVolume}) => {
 			className={styles.card}
 			_hover={{
 				boxShadow: '2xl',
+				cursor: 'pointer'
 			}}
 			onClick={() => goToProduct(id)}
 			>

@@ -1,7 +1,6 @@
 import {useHistory} from 'react-router-dom';
 import {
 	Button, 
-	Box, 
 	Icon, 
 	Flex,
 } from '@chakra-ui/react';

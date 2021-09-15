@@ -45,9 +45,6 @@ const Product = ({productInCart}) => {
 			<Box >
 				$ {totalPrice}
 			</Box>
-			<Box >
-				Redondel
-			</Box>
 		</Flex>
 	);
 }

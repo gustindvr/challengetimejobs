@@ -1,3 +1,4 @@
+import {useHistory} from 'react-router-dom';
 import {
 	Flex,
 	Text,
@@ -13,6 +14,13 @@ import {FaPhoneAlt} from 'react-icons/fa';
 import {MdMail} from 'react-icons/md';
 
 const TopFooter = () => {
+
+	const history = useHistory();
+
+	const goToAboutUs = () => {
+		history.push('/find-us')
+	}
+
 	return (  
 		<Flex 
 			flexFlow='row wrap' 
@@ -30,16 +38,16 @@ const TopFooter = () => {
 				>
 						<Box w={{base:'100%', md: '30%'}}>
 							<Icon as={SiTelegram} color='#9a193c' w='20%' />
-							<Text fontSize={{base: '18px', md:'14px' }}>Calle, <Box fontWeight='bold' display='inline-block'>Localidad, 44,</Box> Ciudad, CCPP</Text>
+							<Text fontSize={{base: '18px', md:'14px' }}>Calle Falsa<Box fontWeight='bold' display='inline-block'> 123,</Box> Ciudad, CCPP</Text>
 						</Box>
 						<Box w={{base:'100%', md: '30%'}} my={{base:'20px', md:'0'}}>
 							<Icon as={FaPhoneAlt} color='#9a193c' w='20%' />
-							<Text fontSize={{base: '18px', md:'14px' }}>* 7 (495) <Box fontWeight='bold'  display='inline-block'>137-77-45</Box>10:00 - 20:00</Text>
+							<Text fontSize={{base: '18px', md:'14px' }}>+54 (011) <Box fontWeight='bold'  display='inline-block'>137-77-45</Box>10:00 - 20:00</Text>
 						</Box>
 						<Box w={{base:'100%', md: '35%'}}>
 							<Icon as={MdMail} color='#9a193c' w='20%' />
-							<Text fontSize='14px'>info@ventadistribution.ru</Text>
-							<Text fontSize='14px'>order@ventadistribution.ru</Text>
+							<Text fontSize='14px'>info@ventadistribution.ar</Text>
+							<Text fontSize='14px'>order@ventadistribution.ar</Text>
 						</Box>	
 				</Flex>
 				<Flex 
@@ -56,11 +64,11 @@ const TopFooter = () => {
 						bg='#9a193c' 
 						_hover={{bg: ' #95072e'}}
 						color='white'
-						
+						onClick={goToAboutUs}
 					>
-						Boton
+						Go to Find Us
 					</Button>
-					<Text fontSize='10px' top={0} m='0'>dice algo muy chiquitito</Text>
+					<Text fontSize='10px' top={0} m='0'>contact means</Text>
 				</Flex>
 
 		</Flex>

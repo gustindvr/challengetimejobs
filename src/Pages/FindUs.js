@@ -5,10 +5,10 @@ import {
 	Flex,
 	Box
 } from '@chakra-ui/react';
-import Info from '../Components/Contacto/Info';
-import Map from '../Components/Contacto/Map';
+import Info from '../Components/FindUs/Info';
+import Map from '../Components/FindUs/Map';
 
-const Contacto = () => {
+const FindUs = () => {
 
 	return (  
 		<>
@@ -29,4 +29,4 @@ const Contacto = () => {
 	);
 }
  
-export default Contacto;
+export default FindUs;

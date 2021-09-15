@@ -12,7 +12,7 @@ import {
 import { Divider, Box } from "@chakra-ui/react";
 import styles from '../Styles/header.module.css';
 import ShoppingCart from "../Pages/ShoppingCart";
-import Contacto from "../Pages/Contacto";
+import FindUs from "../Pages/FindUs";
 import Product from "../Pages/Product";
 import Error404 from "../Components/Errors/404";
 
@@ -32,8 +32,8 @@ const Routes = () => {
 					<Route exact path='/shopping-cart' >
 						<ShoppingCart />
 					</Route>
-					<Route exact path='/contacto' >
-						<Contacto/>
+					<Route exact path='/find-us' >
+						<FindUs/>
 					</Route>
 					<Route exact path='/product/:id' >
 						<Product />

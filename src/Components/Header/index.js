@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import LeftMenu from './LeftMenu';
 import {
 	Flex,
-	Box,
 	Image
 } from '@chakra-ui/react';
 

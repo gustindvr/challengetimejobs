@@ -19,9 +19,11 @@ export default productsSlices.reducer;
 
 export const fetchAllProducts = (page) => {
 	
+	const baseUrl = 'https://api.punkapi.com/v2/beers';
+
 	return async (dispatch) => {
 		try {
-			const resp = await axios.get(`${process.env.REACT_APP_API}?page=${page}`);
+			const resp = await axios.get(`${baseUrl}?page=${page}`);
 			dispatch(setProductsList(resp.data));
 		} catch (error) {
 			console.log(error);
